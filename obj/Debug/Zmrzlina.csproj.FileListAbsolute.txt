@@ -5,3 +5,6 @@ C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.csproj.Ass
 C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.csproj.CoreCompileInputs.cache
 C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.exe
 C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.pdb
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.Properties.Resources.resources
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.vyber_zmrzku.resources
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.csproj.GenerateResource.cache

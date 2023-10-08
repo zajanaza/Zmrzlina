@@ -13,5 +13,15 @@ namespace Zmrzlina {
         public vyber_zmrzku() {
             InitializeComponent();
         }
+        private void vyber_zmrzku_Load(object sender, EventArgs e) {
+            timer_cas.Start();
+        }
+        private void timer_cas_Tick(object sender, EventArgs e) {
+            StatusStripStatusLabel_cas.Text = DateTime.Now.ToLongTimeString();            
+        }
+
+        private void button_zmrzka_Click(object sender, EventArgs e) {
+            this.Close();  
+        }
     }
 }
