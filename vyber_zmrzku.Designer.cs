@@ -39,13 +39,15 @@
             this.trackBar_disk = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label_summaryVyber = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton_vanilkova = new System.Windows.Forms.RadioButton();
+            this.radioButton_cokoladova = new System.Windows.Forms.RadioButton();
+            this.radioButton_michana = new System.Windows.Forms.RadioButton();
             this.groupBox_prichut = new System.Windows.Forms.GroupBox();
             this.checkBox_orisky = new System.Windows.Forms.CheckBox();
             this.numericUpDown_kopecky = new System.Windows.Forms.NumericUpDown();
             this.label_kopecky = new System.Windows.Forms.Label();
+            this.label_druhZmrzliny = new System.Windows.Forms.Label();
+            this.comboBox_tuky = new System.Windows.Forms.ComboBox();
             this.toolStrip_vyberTypu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_disk)).BeginInit();
@@ -115,7 +117,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripStatusLabel_cas,
             this.StripStatusLabel_trackbarPosition});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 492);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 546);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 2;
@@ -135,7 +137,7 @@
             // 
             // progressBar_instalace
             // 
-            this.progressBar_instalace.Location = new System.Drawing.Point(12, 401);
+            this.progressBar_instalace.Location = new System.Drawing.Point(12, 478);
             this.progressBar_instalace.Maximum = 2000;
             this.progressBar_instalace.Name = "progressBar_instalace";
             this.progressBar_instalace.Size = new System.Drawing.Size(355, 36);
@@ -144,7 +146,7 @@
             // label_instalace
             // 
             this.label_instalace.AutoSize = true;
-            this.label_instalace.Location = new System.Drawing.Point(116, 452);
+            this.label_instalace.Location = new System.Drawing.Point(113, 517);
             this.label_instalace.Name = "label_instalace";
             this.label_instalace.Size = new System.Drawing.Size(151, 13);
             this.label_instalace.TabIndex = 4;
@@ -152,7 +154,7 @@
             // 
             // trackBar_disk
             // 
-            this.trackBar_disk.Location = new System.Drawing.Point(13, 340);
+            this.trackBar_disk.Location = new System.Drawing.Point(13, 412);
             this.trackBar_disk.Name = "trackBar_disk";
             this.trackBar_disk.Size = new System.Drawing.Size(354, 45);
             this.trackBar_disk.TabIndex = 5;
@@ -162,7 +164,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 310);
+            this.label1.Location = new System.Drawing.Point(18, 380);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(195, 13);
             this.label1.TabIndex = 6;
@@ -177,44 +179,47 @@
             this.label_summaryVyber.TabIndex = 7;
             this.label_summaryVyber.Text = "label2";
             // 
-            // radioButton1
+            // radioButton_vanilkova
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 31);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(71, 17);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "vanilková";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton_vanilkova.AutoSize = true;
+            this.radioButton_vanilkova.Checked = true;
+            this.radioButton_vanilkova.Location = new System.Drawing.Point(10, 31);
+            this.radioButton_vanilkova.Name = "radioButton_vanilkova";
+            this.radioButton_vanilkova.Size = new System.Drawing.Size(71, 17);
+            this.radioButton_vanilkova.TabIndex = 8;
+            this.radioButton_vanilkova.TabStop = true;
+            this.radioButton_vanilkova.Text = "vanilková";
+            this.radioButton_vanilkova.UseVisualStyleBackColor = true;
+            this.radioButton_vanilkova.CheckedChanged += new System.EventHandler(this.radioButton_vanilkova_CheckedChanged);
             // 
-            // radioButton2
+            // radioButton_cokoladova
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(10, 64);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(81, 17);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "čokoládová";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton_cokoladova.AutoSize = true;
+            this.radioButton_cokoladova.Location = new System.Drawing.Point(10, 64);
+            this.radioButton_cokoladova.Name = "radioButton_cokoladova";
+            this.radioButton_cokoladova.Size = new System.Drawing.Size(81, 17);
+            this.radioButton_cokoladova.TabIndex = 9;
+            this.radioButton_cokoladova.TabStop = true;
+            this.radioButton_cokoladova.Text = "čokoládová";
+            this.radioButton_cokoladova.UseVisualStyleBackColor = true;
+            this.radioButton_cokoladova.CheckedChanged += new System.EventHandler(this.radioButton_cokoladova_CheckedChanged);
             // 
-            // radioButton3
+            // radioButton_michana
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(10, 97);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(85, 17);
-            this.radioButton3.TabIndex = 10;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton_michana.AutoSize = true;
+            this.radioButton_michana.Location = new System.Drawing.Point(10, 97);
+            this.radioButton_michana.Name = "radioButton_michana";
+            this.radioButton_michana.Size = new System.Drawing.Size(67, 17);
+            this.radioButton_michana.TabIndex = 10;
+            this.radioButton_michana.Text = "míchaná";
+            this.radioButton_michana.UseVisualStyleBackColor = true;
+            this.radioButton_michana.CheckedChanged += new System.EventHandler(this.radioButton_michana_CheckedChanged);
             // 
             // groupBox_prichut
             // 
-            this.groupBox_prichut.Controls.Add(this.radioButton3);
-            this.groupBox_prichut.Controls.Add(this.radioButton2);
-            this.groupBox_prichut.Controls.Add(this.radioButton1);
+            this.groupBox_prichut.Controls.Add(this.radioButton_michana);
+            this.groupBox_prichut.Controls.Add(this.radioButton_cokoladova);
+            this.groupBox_prichut.Controls.Add(this.radioButton_vanilkova);
             this.groupBox_prichut.Location = new System.Drawing.Point(19, 73);
             this.groupBox_prichut.Name = "groupBox_prichut";
             this.groupBox_prichut.Size = new System.Drawing.Size(188, 129);
@@ -225,18 +230,26 @@
             // checkBox_orisky
             // 
             this.checkBox_orisky.AutoSize = true;
+            this.checkBox_orisky.Checked = true;
+            this.checkBox_orisky.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox_orisky.Location = new System.Drawing.Point(19, 221);
             this.checkBox_orisky.Name = "checkBox_orisky";
             this.checkBox_orisky.Size = new System.Drawing.Size(118, 17);
             this.checkBox_orisky.TabIndex = 12;
             this.checkBox_orisky.Text = "Posypanou oříšky?";
             this.checkBox_orisky.UseVisualStyleBackColor = true;
+            this.checkBox_orisky.CheckedChanged += new System.EventHandler(this.checkBox_orisky_CheckedChanged);
             // 
             // numericUpDown_kopecky
             // 
-            this.numericUpDown_kopecky.Location = new System.Drawing.Point(21, 263);
+            this.numericUpDown_kopecky.Location = new System.Drawing.Point(13, 265);
             this.numericUpDown_kopecky.Maximum = new decimal(new int[] {
             4,
+            0,
+            0,
+            0});
+            this.numericUpDown_kopecky.Minimum = new decimal(new int[] {
+            1,
             0,
             0,
             0});
@@ -244,21 +257,51 @@
             this.numericUpDown_kopecky.Size = new System.Drawing.Size(42, 20);
             this.numericUpDown_kopecky.TabIndex = 13;
             this.numericUpDown_kopecky.Tag = "";
+            this.numericUpDown_kopecky.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown_kopecky.ValueChanged += new System.EventHandler(this.numericUpDown_kopecky_ValueChanged);
             // 
             // label_kopecky
             // 
             this.label_kopecky.AutoSize = true;
-            this.label_kopecky.Location = new System.Drawing.Point(81, 263);
+            this.label_kopecky.Location = new System.Drawing.Point(61, 269);
             this.label_kopecky.Name = "label_kopecky";
             this.label_kopecky.Size = new System.Drawing.Size(118, 13);
             this.label_kopecky.TabIndex = 14;
             this.label_kopecky.Text = "Kolik kopečků (max 4)?";
             // 
+            // label_druhZmrzliny
+            // 
+            this.label_druhZmrzliny.AutoSize = true;
+            this.label_druhZmrzliny.Location = new System.Drawing.Point(14, 305);
+            this.label_druhZmrzliny.Name = "label_druhZmrzliny";
+            this.label_druhZmrzliny.Size = new System.Drawing.Size(72, 13);
+            this.label_druhZmrzliny.TabIndex = 15;
+            this.label_druhZmrzliny.Text = "Druh zmrzliny:";
+            // 
+            // comboBox_tuky
+            // 
+            this.comboBox_tuky.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_tuky.FormattingEnabled = true;
+            this.comboBox_tuky.Items.AddRange(new object[] {
+            "nízkotučná",
+            "normální"});
+            this.comboBox_tuky.Location = new System.Drawing.Point(12, 338);
+            this.comboBox_tuky.Name = "comboBox_tuky";
+            this.comboBox_tuky.Size = new System.Drawing.Size(167, 21);
+            this.comboBox_tuky.TabIndex = 16;
+            this.comboBox_tuky.SelectedIndexChanged += new System.EventHandler(this.comboBox_tuky_SelectedIndexChanged);
+            // 
             // vyber_zmrzku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 514);
+            this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.comboBox_tuky);
+            this.Controls.Add(this.label_druhZmrzliny);
             this.Controls.Add(this.label_kopecky);
             this.Controls.Add(this.numericUpDown_kopecky);
             this.Controls.Add(this.checkBox_orisky);
@@ -303,12 +346,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripStatusLabel StripStatusLabel_trackbarPosition;
         private System.Windows.Forms.Label label_summaryVyber;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton_vanilkova;
+        private System.Windows.Forms.RadioButton radioButton_cokoladova;
+        private System.Windows.Forms.RadioButton radioButton_michana;
         private System.Windows.Forms.GroupBox groupBox_prichut;
         private System.Windows.Forms.CheckBox checkBox_orisky;
         private System.Windows.Forms.NumericUpDown numericUpDown_kopecky;
         private System.Windows.Forms.Label label_kopecky;
+        private System.Windows.Forms.Label label_druhZmrzliny;
+        private System.Windows.Forms.ComboBox comboBox_tuky;
     }
 }
