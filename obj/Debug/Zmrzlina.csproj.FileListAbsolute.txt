@@ -1,0 +1,7 @@
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\bin\Debug\Zmrzlina.exe.config
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\bin\Debug\Zmrzlina.exe
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\bin\Debug\Zmrzlina.pdb
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.csproj.AssemblyReference.cache
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.csproj.CoreCompileInputs.cache
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.exe
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.pdb
