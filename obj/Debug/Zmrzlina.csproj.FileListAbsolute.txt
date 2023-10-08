@@ -8,3 +8,4 @@ C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.pdb
 C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.Properties.Resources.resources
 C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.vyber_zmrzku.resources
 C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.csproj.GenerateResource.cache
+C:\Users\Jana\moje\programovani\výuka\VB\Zmrzlina\obj\Debug\Zmrzlina.InputBox.resources

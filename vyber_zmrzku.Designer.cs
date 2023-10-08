@@ -48,11 +48,18 @@
             this.label_kopecky = new System.Windows.Forms.Label();
             this.label_druhZmrzliny = new System.Windows.Forms.Label();
             this.comboBox_tuky = new System.Windows.Forms.ComboBox();
+            this.textBox_soubor = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.souborToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.otevřítToolStripMenuItem_otevrit = new System.Windows.Forms.ToolStripMenuItem();
+            this.nápovědaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox_scitanec1 = new System.Windows.Forms.TextBox();
             this.toolStrip_vyberTypu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_disk)).BeginInit();
             this.groupBox_prichut.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_kopecky)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_zmrzka
@@ -67,13 +74,14 @@
             // 
             // toolStrip_vyberTypu
             // 
+            this.toolStrip_vyberTypu.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip_vyberTypu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripButton3});
-            this.toolStrip_vyberTypu.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip_vyberTypu.Location = new System.Drawing.Point(0, 22);
             this.toolStrip_vyberTypu.Name = "toolStrip_vyberTypu";
-            this.toolStrip_vyberTypu.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip_vyberTypu.Size = new System.Drawing.Size(81, 25);
             this.toolStrip_vyberTypu.TabIndex = 1;
             this.toolStrip_vyberTypu.Text = "toolStrip1";
             // 
@@ -132,8 +140,8 @@
             // StripStatusLabel_trackbarPosition
             // 
             this.StripStatusLabel_trackbarPosition.Name = "StripStatusLabel_trackbarPosition";
-            this.StripStatusLabel_trackbarPosition.Size = new System.Drawing.Size(118, 17);
-            this.StripStatusLabel_trackbarPosition.Text = "toolStripStatusLabel1";
+            this.StripStatusLabel_trackbarPosition.Size = new System.Drawing.Size(98, 17);
+            this.StripStatusLabel_trackbarPosition.Text = "trackBar_position";
             // 
             // progressBar_instalace
             // 
@@ -173,11 +181,11 @@
             // label_summaryVyber
             // 
             this.label_summaryVyber.AutoSize = true;
-            this.label_summaryVyber.Location = new System.Drawing.Point(22, 36);
+            this.label_summaryVyber.Location = new System.Drawing.Point(18, 47);
             this.label_summaryVyber.Name = "label_summaryVyber";
-            this.label_summaryVyber.Size = new System.Drawing.Size(35, 13);
+            this.label_summaryVyber.Size = new System.Drawing.Size(100, 13);
             this.label_summaryVyber.TabIndex = 7;
-            this.label_summaryVyber.Text = "label2";
+            this.label_summaryVyber.Text = "Shrnutí objednávky";
             // 
             // radioButton_vanilkova
             // 
@@ -288,18 +296,69 @@
             this.comboBox_tuky.FormattingEnabled = true;
             this.comboBox_tuky.Items.AddRange(new object[] {
             "nízkotučná",
-            "normální"});
+            "jogurtová",
+            "smetanová"});
             this.comboBox_tuky.Location = new System.Drawing.Point(12, 338);
             this.comboBox_tuky.Name = "comboBox_tuky";
             this.comboBox_tuky.Size = new System.Drawing.Size(167, 21);
             this.comboBox_tuky.TabIndex = 16;
             this.comboBox_tuky.SelectedIndexChanged += new System.EventHandler(this.comboBox_tuky_SelectedIndexChanged);
             // 
+            // textBox_soubor
+            // 
+            this.textBox_soubor.Location = new System.Drawing.Point(475, 253);
+            this.textBox_soubor.Multiline = true;
+            this.textBox_soubor.Name = "textBox_soubor";
+            this.textBox_soubor.Size = new System.Drawing.Size(287, 276);
+            this.textBox_soubor.TabIndex = 17;
+            this.textBox_soubor.Text = "skákla pes přes oves";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.souborToolStripMenuItem,
+            this.nápovědaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // souborToolStripMenuItem
+            // 
+            this.souborToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.otevřítToolStripMenuItem_otevrit});
+            this.souborToolStripMenuItem.Name = "souborToolStripMenuItem";
+            this.souborToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.souborToolStripMenuItem.Text = "Soubor";
+            // 
+            // otevřítToolStripMenuItem_otevrit
+            // 
+            this.otevřítToolStripMenuItem_otevrit.Name = "otevřítToolStripMenuItem_otevrit";
+            this.otevřítToolStripMenuItem_otevrit.Size = new System.Drawing.Size(180, 22);
+            this.otevřítToolStripMenuItem_otevrit.Text = "Otevřít";
+            this.otevřítToolStripMenuItem_otevrit.Click += new System.EventHandler(this.otevřítToolStripMenuItem_otevrit_Click);
+            // 
+            // nápovědaToolStripMenuItem
+            // 
+            this.nápovědaToolStripMenuItem.Name = "nápovědaToolStripMenuItem";
+            this.nápovědaToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.nápovědaToolStripMenuItem.Text = "Nápověda";
+            // 
+            // textBox_scitanec1
+            // 
+            this.textBox_scitanec1.Location = new System.Drawing.Point(397, 62);
+            this.textBox_scitanec1.Name = "textBox_scitanec1";
+            this.textBox_scitanec1.Size = new System.Drawing.Size(34, 20);
+            this.textBox_scitanec1.TabIndex = 19;
+            // 
             // vyber_zmrzku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 568);
+            this.Controls.Add(this.textBox_scitanec1);
+            this.Controls.Add(this.textBox_soubor);
             this.Controls.Add(this.comboBox_tuky);
             this.Controls.Add(this.label_druhZmrzliny);
             this.Controls.Add(this.label_kopecky);
@@ -313,7 +372,9 @@
             this.Controls.Add(this.progressBar_instalace);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip_vyberTypu);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button_zmrzka);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "vyber_zmrzku";
             this.Text = "vyber_zmrzku";
             this.Load += new System.EventHandler(this.vyber_zmrzku_Load);
@@ -325,6 +386,8 @@
             this.groupBox_prichut.ResumeLayout(false);
             this.groupBox_prichut.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_kopecky)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -355,5 +418,11 @@
         private System.Windows.Forms.Label label_kopecky;
         private System.Windows.Forms.Label label_druhZmrzliny;
         private System.Windows.Forms.ComboBox comboBox_tuky;
+        private System.Windows.Forms.TextBox textBox_soubor;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem souborToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem otevřítToolStripMenuItem_otevrit;
+        private System.Windows.Forms.ToolStripMenuItem nápovědaToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox_scitanec1;
     }
 }

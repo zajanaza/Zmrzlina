@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace Zmrzlina {
             StripStatusLabel_trackbarPosition.Text = trackBar_disk.Value.ToString();
             ret = ret1 + ret2 + ret3 + ret4;
             label_summaryVyber.Text = ret;
-            comboBox_tuky.SelectedIndex = 1;
+            comboBox_tuky.SelectedIndex = 1;            
         }
         private void timer_cas_Tick(object sender, EventArgs e) {
             StripStatusLabel_cas.Text = DateTime.Now.ToLongTimeString();
@@ -88,6 +89,14 @@ namespace Zmrzlina {
             ret4 = " " + comboBox_tuky.SelectedItem.ToString();
             ret = ret1 + ret2 + ret3 + ret4;
             label_summaryVyber.Text = ret;
+        }
+
+        private void otevřítToolStripMenuItem_otevrit_Click(object sender, EventArgs e) {
+            string text;
+            string cesta = "C:\\Users\\Jana\\moje\\programovani\\výuka\\VB\\Zmrzlina\\text.txt";
+            FileInfo soubor = new FileInfo(cesta);
+            text = File.ReadAllText(cesta);
+            textBox_soubor.Text = text;
         }
     }
 }
