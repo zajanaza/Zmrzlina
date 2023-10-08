@@ -32,9 +32,15 @@
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.timer_cas = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.StatusStripStatusLabel_cas = new System.Windows.Forms.ToolStripStatusLabel();
+            this.StripStatusLabel_cas = new System.Windows.Forms.ToolStripStatusLabel();
+            this.progressBar_instalace = new System.Windows.Forms.ProgressBar();
+            this.label_instalace = new System.Windows.Forms.Label();
+            this.trackBar_disk = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.StripStatusLabel_trackbarPosition = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip_vyberTypu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_disk)).BeginInit();
             this.SuspendLayout();
             // 
             // button_zmrzka
@@ -91,30 +97,76 @@
             // 
             // timer_cas
             // 
-            this.timer_cas.Interval = 2;
+            this.timer_cas.Interval = 1;
             this.timer_cas.Tick += new System.EventHandler(this.timer_cas_Tick);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.StatusStripStatusLabel_cas});
+            this.StripStatusLabel_cas,
+            this.StripStatusLabel_trackbarPosition});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // StatusStripStatusLabel_cas
+            // StripStatusLabel_cas
             // 
-            this.StatusStripStatusLabel_cas.Name = "StatusStripStatusLabel_cas";
-            this.StatusStripStatusLabel_cas.Size = new System.Drawing.Size(24, 17);
-            this.StatusStripStatusLabel_cas.Text = "cas";
+            this.StripStatusLabel_cas.Name = "StripStatusLabel_cas";
+            this.StripStatusLabel_cas.Size = new System.Drawing.Size(24, 17);
+            this.StripStatusLabel_cas.Text = "cas";
+            // 
+            // progressBar_instalace
+            // 
+            this.progressBar_instalace.Location = new System.Drawing.Point(12, 346);
+            this.progressBar_instalace.Maximum = 2000;
+            this.progressBar_instalace.Name = "progressBar_instalace";
+            this.progressBar_instalace.Size = new System.Drawing.Size(355, 36);
+            this.progressBar_instalace.TabIndex = 3;
+            // 
+            // label_instalace
+            // 
+            this.label_instalace.AutoSize = true;
+            this.label_instalace.Location = new System.Drawing.Point(119, 394);
+            this.label_instalace.Name = "label_instalace";
+            this.label_instalace.Size = new System.Drawing.Size(151, 13);
+            this.label_instalace.TabIndex = 4;
+            this.label_instalace.Text = "Instalace probíhá, čekejte (2s)";
+            // 
+            // trackBar_disk
+            // 
+            this.trackBar_disk.Location = new System.Drawing.Point(12, 291);
+            this.trackBar_disk.Name = "trackBar_disk";
+            this.trackBar_disk.Size = new System.Drawing.Size(354, 45);
+            this.trackBar_disk.TabIndex = 5;
+            this.trackBar_disk.Value = 4;
+            this.trackBar_disk.Scroll += new System.EventHandler(this.trackBar_disk_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "% disku pro offline složky (viz status bar)\r\n";
+            // 
+            // StripStatusLabel_trackbarPosition
+            // 
+            this.StripStatusLabel_trackbarPosition.Name = "StripStatusLabel_trackbarPosition";
+            this.StripStatusLabel_trackbarPosition.Size = new System.Drawing.Size(118, 17);
+            this.StripStatusLabel_trackbarPosition.Text = "toolStripStatusLabel1";
             // 
             // vyber_zmrzku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.trackBar_disk);
+            this.Controls.Add(this.label_instalace);
+            this.Controls.Add(this.progressBar_instalace);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip_vyberTypu);
             this.Controls.Add(this.button_zmrzka);
@@ -125,6 +177,7 @@
             this.toolStrip_vyberTypu.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_disk)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +192,11 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.Timer timer_cas;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel StatusStripStatusLabel_cas;
+        private System.Windows.Forms.ToolStripStatusLabel StripStatusLabel_cas;
+        private System.Windows.Forms.ProgressBar progressBar_instalace;
+        private System.Windows.Forms.Label label_instalace;
+        private System.Windows.Forms.TrackBar trackBar_disk;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripStatusLabel StripStatusLabel_trackbarPosition;
     }
 }
